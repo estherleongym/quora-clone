@@ -1,3 +1,4 @@
+
 get '/questions/ask' do
 
   erb :"static/question"

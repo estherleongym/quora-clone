@@ -9,13 +9,13 @@
 		
 			<h2>Hi you're logged in </h2>
 		
-			<form method ="post" action="/session/logout">
+			<form name="logout" method ="post" action="/session/logout">
 				
 				<input type="submit" name="_method" value="delete">		
 
 			</form>
 
-			<form method ="post" action="/users/:id">
+			<form name="my_profile" method ="post" action="/users/:id">
 				
 				<input type="submit" name="profile" value="My Profile">		
 
@@ -26,7 +26,6 @@
 				<input type="submit" name="ask_button" value="Ask a Question">		
 
 			</form>
-
 
 		</body>
 
