@@ -27,6 +27,28 @@
 
 			</form>
 
+			<table class="top_stories" align="center" style="width:900px">
+				<%num = 1%>
+				 <%Question.all.each do |x|%>
+					
+				 <tr>
+<!-- 				 <td><%= num %></td> -->
+				 <td><%=x.title%></td>
+				 
+				 <tr>
+				<td><%=x.question_description%></td>
+				</tr>
+
+				<tr>
+				<td><%=current_user.first_name + " " + current_user.last_name%> </td>
+				</tr>
+
+				<%num += 1%>
+
+				 <%end%>
+
+</table>
+
 		</body>
 
 </html>

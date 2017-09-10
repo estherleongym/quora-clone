@@ -8,7 +8,8 @@ end
 
 post '/questions/submit_question' do
 
-  @question = Question.new(params[:questions])
+  @question = Question.new(params[:question])
+
 
   	if @question.save
 
