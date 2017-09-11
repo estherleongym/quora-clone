@@ -7,7 +7,7 @@
 		<body>
 
 		
-			<h2>Hi you're logged in </h2>
+			<h2 id="login_header">Hi you're logged in </h2>
 		
 			<form name="logout" method ="post" action="/session/logout">
 				
@@ -34,16 +34,21 @@
 				 <tr>
 <!-- 				 <td><%= num %></td> -->
 				 <td><%=x.title%></td>
-				 
+				 </tr>
 				 <tr>
 				<td><%=x.question_description%></td>
 				</tr>
 
 				<tr>
-				<td><%=current_user.first_name + " " + current_user.last_name%> </td>
+				<% user = User.find_by(id: x.users_id)%> 
+				<td><%=user.first_name + " " + user.last_name%></td>
+				<td> </td>
 				</tr>
-
-				<%num += 1%>
+				 <tr></tr>
+				  <tr></tr>
+				   <tr></tr>
+					
+						<%num += 1%>
 
 				 <%end%>
 
