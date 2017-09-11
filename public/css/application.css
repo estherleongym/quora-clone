@@ -15,9 +15,10 @@
 #signup_container{
 
 	
-	width: 400px;
-	height: 200px;
-	background-color: grey;
+	width: 200px;
+	height: 400px;
+	font-family: 'Playfair Display', serif;
+	background-color: #f7f8f9;
 	text-align: center; 
 	display: block;
 	margin:0 auto;
@@ -27,16 +28,31 @@
 #login_container{
 
 	
-	width: 400px;
-	height: 200px;
-	background-color: grey;
+	width: 200px;
+	height: 400px;
+	color: blue;
+	font-family: 'Playfair Display', serif;
+	background-color: #f7f8f9;
 	text-align: center; 
 	display: block;
 	margin:0 auto;
 
 }
 
+.btn {
 
+	border-radius: 5px;
+    border: 2px solid #ee6123;
+    background: #ee6123;
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	color: #f9fcfb;
+	font-size: 12px;
+	font-weight: 700;
+
+}
 
 
 
