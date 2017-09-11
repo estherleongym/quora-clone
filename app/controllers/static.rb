@@ -64,7 +64,7 @@ get '/login' do
 
 	if logged_in?
 
-		redirect '/home'
+		erb :"static/session"
 
 	else
 
@@ -74,9 +74,5 @@ get '/login' do
 
 end	
 
-get '/home' do
 
-	@error = "You're logged in, but I haven't got a page right now"
-
-end
 
