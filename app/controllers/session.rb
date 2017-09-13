@@ -1,5 +1,5 @@
 get '/session' do
-  
+
   erb :"static/session"
 
 end

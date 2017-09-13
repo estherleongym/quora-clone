@@ -28,31 +28,40 @@
 			</form>
 
 			<table class="top_stories" align="center" style="width:900px">
-				<%num = 1%>
+
 				 <%Question.all.each do |x|%>
 					
 				 <tr>
-<!-- 				 <td><%= num %></td> -->
 				 <td><%=x.title%></td>
 				 </tr>
 				 <tr>
 				<td><%=x.question_description%></td>
 				</tr>
-
 				<tr>
 				<% user = User.find_by(id: x.users_id)%> 
 				<td><%=user.first_name + " " + user.last_name%></td>
-				<td> </td>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+				<td><%= Answer.where(questions_id: x).pluck(:answer_text)%></td>
 				</tr>
 				 <tr></tr>
 				  <tr></tr>
 				   <tr></tr>
+				  
+				  	 <% question_id = x.id%> 
+
+				 	  <td><form method="get" action="/answer/<%=x.id%>">
+				
+						<input type="submit" name="answer" value="Answer"></form>
+
+						</td>
 					
-						<%num += 1%>
 
 				 <%end%>
 
-</table>
+			</table>
 
 		</body>
 

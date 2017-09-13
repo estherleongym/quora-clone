@@ -1,0 +1,15 @@
+	<body>
+		
+		<%question = Question.find_by(id: @q_id)%>
+		<h2>Answer to: "<%=question.title%>"</h2>
+		
+			<form name="answer_question" method ="post" action="/answer/">
+				
+				<input type="text" placeholder="Answer" name="answer[answer_text]"><br>
+				<input type="hidden" value="<%=current_user.id%>" name="answer[users_id]"></br>
+				<input type="hidden" value="<%=@q_id%>" name="answer[questions_id]"></br>
+				<input type="submit" name="submit_question" value="Answer"></br>
+
+			</form>
+
+	</body>
