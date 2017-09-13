@@ -1,4 +1,4 @@
-class Answer < ActiveRecord::Base[5.0]
+class Answer < ActiveRecord::Base
 	
 	belongs_to :question
 	belongs_to :user
